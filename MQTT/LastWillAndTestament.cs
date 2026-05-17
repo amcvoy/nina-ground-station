@@ -28,6 +28,7 @@ namespace DaleGhent.NINA.GroundStation.Mqtt {
             this.groundStationConfig = groundStationOptions;
 
             lwtClient = new MqttClient() {
+                Topic = groundStationOptions.MqttLwtTopic,
                 Payload = Utilities.Utilities.ResolveTokens(groundStationOptions.MqttLwtBirthPayload),
                 LastWillTopic = groundStationOptions.MqttLwtTopic,
                 LastWillPayload = Utilities.Utilities.ResolveTokens(groundStationOptions.MqttLwtLastWillPayload),

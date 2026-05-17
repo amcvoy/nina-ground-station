@@ -1,5 +1,9 @@
 ﻿# Ground Station
 
+## Unreleased
+* Fixed issues:
+  - MQTT: Birth and close payloads are now correctly published to the configured LWT topic instead of the default topic. Also restored the LWT topic getter's fallback to `Settings.Default.MqttLwtTopic` for profiles where no per-profile value has been stored. (#24)
+
 ## 3.0.0.117 - 2025-11-12
 * Minimum supported NINA version is now 3.2.
 * **Major change**: Plugin configuration is now per-profile instead of being single global settings that apply to all profiles. This permits you to have profile-specific settings. Your former global settings will now act as the _default_ settings for Ground Station when a new profile is created. Your pre-3.0 settings will be migrated into each profile whenever that profile is loaded.

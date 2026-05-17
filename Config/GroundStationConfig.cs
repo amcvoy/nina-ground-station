@@ -414,7 +414,7 @@ namespace DaleGhent.NINA.GroundStation.Config {
                                                 && !string.IsNullOrEmpty(MqttImagePublisherImageTopic);
 
         public string MqttLwtTopic {
-            get => pluginOptionsAccessor.GetValueString(nameof(MqttLwtTopic), Settings.Default.MqttDefaultTopic);
+            get => pluginOptionsAccessor.GetValueString(nameof(MqttLwtTopic), Settings.Default.MqttLwtTopic);
             set {
                 pluginOptionsAccessor.SetValueString(nameof(MqttLwtTopic), value.Trim());
                 RaisePropertyChanged();
